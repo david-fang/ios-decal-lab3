@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stopwatch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StopwatchViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no : time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-il-HWL">
+                                <rect key="frame" x="66" y="69" width="244" height="51"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="45"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huO-pO-CEF">
+                                <rect key="frame" x="66" y="594" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopwatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HaB-n6-nAT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFO-3Y-4dl">
+                                <rect key="frame" x="277.5" y="594" width="32" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopStopwatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpW-Gs-8aH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-Kl-K10">
+                                <rect key="frame" x="80" y="311" width="216.5" height="45"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
+                                <color key="textColor" red="0.98674410581588745" green="0.95939451456069946" blue="0.96155709028244019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.033778153359889984" green="0.0063389362767338753" blue="0.0087190428748726845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A4h-Kl-K10" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4IR-h0-GJu"/>
+                            <constraint firstItem="BFO-3Y-4dl" firstAttribute="centerY" secondItem="huO-pO-CEF" secondAttribute="centerY" id="G7e-9y-dBa"/>
+                            <constraint firstItem="huO-pO-CEF" firstAttribute="leading" secondItem="b5a-il-HWL" secondAttribute="leading" id="LSc-Ly-GfL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="huO-pO-CEF" secondAttribute="bottom" constant="43" id="QUk-vv-hSV"/>
+                            <constraint firstItem="b5a-il-HWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gyc-AH-k6F"/>
+                            <constraint firstItem="BFO-3Y-4dl" firstAttribute="trailing" secondItem="b5a-il-HWL" secondAttribute="trailing" id="iTA-aS-lZY"/>
+                            <constraint firstItem="A4h-Kl-K10" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lXc-EA-UOA"/>
+                            <constraint firstItem="b5a-il-HWL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="osq-4O-Ldn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stopwatchLabel" destination="A4h-Kl-K10" id="6Al-QN-gAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
