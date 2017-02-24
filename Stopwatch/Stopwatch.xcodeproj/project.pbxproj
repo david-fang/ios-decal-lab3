@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0742555B1E5E014200EE3858 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0742555A1E5E014200EE3858 /* CircleView.swift */; };
 		075C8FDC1E5697D100447AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C8FDB1E5697D100447AFA /* AppDelegate.swift */; };
 		075C8FDE1E5697D100447AFA /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C8FDD1E5697D100447AFA /* StopwatchViewController.swift */; };
 		075C8FE11E5697D100447AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075C8FDF1E5697D100447AFA /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0742555A1E5E014200EE3858 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		075C8FD81E5697D100447AFA /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075C8FDB1E5697D100447AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		075C8FDD1E5697D100447AFA /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				075C8FDF1E5697D100447AFA /* Main.storyboard */,
 				07F46A4D1E569B2200566854 /* Stopwatch.swift */,
 				07F46A4F1E569B6400566854 /* RoundButton.swift */,
+				0742555A1E5E014200EE3858 /* CircleView.swift */,
 				075C8FE21E5697D100447AFA /* Assets.xcassets */,
 				075C8FE41E5697D100447AFA /* LaunchScreen.storyboard */,
 				075C8FE71E5697D100447AFA /* Info.plist */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F46A501E569B6400566854 /* RoundButton.swift in Sources */,
+				0742555B1E5E014200EE3858 /* CircleView.swift in Sources */,
 				075C8FDE1E5697D100447AFA /* StopwatchViewController.swift in Sources */,
 				07F46A4E1E569B2200566854 /* Stopwatch.swift in Sources */,
 				075C8FDC1E5697D100447AFA /* AppDelegate.swift in Sources */,

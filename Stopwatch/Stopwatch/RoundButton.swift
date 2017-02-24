@@ -11,8 +11,12 @@ import UIKit
 class RoundButton: UIButton {
     
     override func draw(_ rect: CGRect) {
-        super.draw(rect);
+        super.draw(rect)
+        self.layer.cornerRadius = 0.5 * self.bounds.size.width
+        self.clipsToBounds = true
         
+        self.layer.borderWidth = 1
+        self.layer.borderColor = self.titleLabel?.textColor.cgColor
     }
     
 }

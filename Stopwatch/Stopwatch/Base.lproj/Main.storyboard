@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,21 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no : time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-il-HWL">
-                                <rect key="frame" x="66" y="69" width="244" height="51"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="45"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huO-pO-CEF">
-                                <rect key="frame" x="66" y="594" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startStopwatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HaB-n6-nAT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFO-3Y-4dl">
-                                <rect key="frame" x="277.5" y="594" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFO-3Y-4dl" customClass="RoundButton" customModule="Stopwatch" customModuleProvider="target">
+                                <rect key="frame" x="271" y="546" width="80" height="80"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -43,23 +31,46 @@
                                     <action selector="stopStopwatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpW-Gs-8aH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-Kl-K10">
-                                <rect key="frame" x="80" y="311" width="216.5" height="45"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                <color key="textColor" red="0.98674410581588745" green="0.95939451456069946" blue="0.96155709028244019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-il-HWL">
+                                <rect key="frame" x="24" y="70" width="327" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-Kl-K10">
+                                <rect key="frame" x="24" y="294" width="327" height="79.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huO-pO-CEF" customClass="RoundButton" customModule="Stopwatch" customModuleProvider="target">
+                                <rect key="frame" x="24" y="546" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AOB-Ol-1xm"/>
+                                    <constraint firstAttribute="width" constant="80" id="uIC-qJ-3A7"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startStopwatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HaB-n6-nAT"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.033778153359889984" green="0.0063389362767338753" blue="0.0087190428748726845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="A4h-Kl-K10" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4IR-h0-GJu"/>
+                            <constraint firstItem="A4h-Kl-K10" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Ao-5q-pct"/>
+                            <constraint firstItem="huO-pO-CEF" firstAttribute="leading" secondItem="A4h-Kl-K10" secondAttribute="leading" id="2xf-KC-DDT"/>
+                            <constraint firstItem="A4h-Kl-K10" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="9IU-4e-fd1"/>
+                            <constraint firstItem="BFO-3Y-4dl" firstAttribute="height" secondItem="huO-pO-CEF" secondAttribute="height" id="Chi-pH-R6T"/>
                             <constraint firstItem="BFO-3Y-4dl" firstAttribute="centerY" secondItem="huO-pO-CEF" secondAttribute="centerY" id="G7e-9y-dBa"/>
-                            <constraint firstItem="huO-pO-CEF" firstAttribute="leading" secondItem="b5a-il-HWL" secondAttribute="leading" id="LSc-Ly-GfL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="huO-pO-CEF" secondAttribute="bottom" constant="43" id="QUk-vv-hSV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="huO-pO-CEF" secondAttribute="bottom" constant="41" id="QUk-vv-hSV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A4h-Kl-K10" secondAttribute="trailing" constant="8" id="a4g-PC-uQK"/>
+                            <constraint firstItem="BFO-3Y-4dl" firstAttribute="trailing" secondItem="A4h-Kl-K10" secondAttribute="trailing" id="aNd-68-JDz"/>
                             <constraint firstItem="b5a-il-HWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gyc-AH-k6F"/>
-                            <constraint firstItem="BFO-3Y-4dl" firstAttribute="trailing" secondItem="b5a-il-HWL" secondAttribute="trailing" id="iTA-aS-lZY"/>
-                            <constraint firstItem="A4h-Kl-K10" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lXc-EA-UOA"/>
-                            <constraint firstItem="b5a-il-HWL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="osq-4O-Ldn"/>
+                            <constraint firstItem="b5a-il-HWL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="npL-TK-pIO"/>
+                            <constraint firstItem="b5a-il-HWL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="osq-4O-Ldn"/>
+                            <constraint firstItem="A4h-Kl-K10" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u15-Li-9Dx"/>
+                            <constraint firstItem="BFO-3Y-4dl" firstAttribute="width" secondItem="huO-pO-CEF" secondAttribute="width" id="vx7-5m-lyq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b5a-il-HWL" secondAttribute="trailing" constant="8" id="wRw-8g-Bbw"/>
                         </constraints>
                     </view>
                     <connections>
